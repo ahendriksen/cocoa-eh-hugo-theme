@@ -718,6 +718,8 @@ kbd {
   white-space: nowrap;
 }
 
+nav ul li + li { border-left: 1px solid #666; padding-left: 12px;}
+
 /* Fonts */
 
 {{ if not .Site.Params.disablefancyfonts  }}
