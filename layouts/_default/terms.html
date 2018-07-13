@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+<div class="main column">
+    <div class="container">
+        <div class="content">
+            <div class="posts">
+	      <div class="page-heading"> Posts, by {{ .Data.Singular }}</div>
+	      {{ $type := .Type }}
+              <ul>
+                {{ range .Data.Terms.ByCount }}
+		    {{ $count := .Count }}
+		    {{ with $.Site.GetPage "taxonomy" $type (.Name | urlize) }}
+		<li>
+		  <a href="{{.Permalink }}"> {{ .Name }}</a> ({{ $count }})
+		</li>
+		{{ end }}
+		{{ end }}
+              </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{{ partial "footer.html" . }}

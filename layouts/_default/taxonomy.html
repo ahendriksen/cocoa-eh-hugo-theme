@@ -9,6 +9,9 @@
                         {{ partial "li.html" . }}
                     {{ end }}
                 </ul>
+		{{ with .Site.GetPage "taxonomyTerm" .Section }}
+		<a class="see-more" href="{{ .Permalink }}">Index of all <span>{{ .Type }}</span></a>
+		{{ end }}
             </div>
         </div>
     </div>
