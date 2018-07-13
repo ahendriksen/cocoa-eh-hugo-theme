@@ -2,16 +2,12 @@
 
 <style media="screen">
   {{ partial "css/main.css" . | safeCSS }}
+  {{ partial "css/fonts.css" . | safeCSS }}
 </style>
 <style media="(min-width: 600px)">
   {{ partial "css/min600px.css" . | safeCSS }}
 </style>
 
-<noscript>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
-</noscript>
 
 {{ if .Site.Params.highlightjs }}
   <style type="text/css" media="screen">

@@ -1,9 +1,9 @@
 {{ if not .Site.Params.disablefancyfonts }}
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="{{ .Site.BaseURL }}js/webfont.v1.6.26.min.js"></script>
 <script>
   WebFont.load({
-    google: {
-      families: ['Raleway:400,600,700', 'Merriweather:300,300i,700,700i', 'Ubuntu+Mono:400,700']
+    custom: {
+  families: ['Raleway:n4,n6,n7', 'Merriweather:n3,i3,n7,i7', 'Ubuntu+Mono:n4,n7']
     }
   });
 </script>
