@@ -17,7 +17,7 @@
                     <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">{{ .Date.Format .Site.Params.dateform }}</div>
                     {{ if not .Params.noauthor }}
                         {{ if .Params.author }}
-                        <div class="author middot" title="{{ .Params.Author }}">{{ .Params.author }}</div>
+                        <div class="author middot" title="{{ .Params.Author }}">{{ range .Params.author }} {{ . }} {{ end }}</div>
                         {{end}}
                     {{end}}
                     <div class="reading-time middot">{{ .ReadingTime }} minute read</div>
