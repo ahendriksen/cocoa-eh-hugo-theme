@@ -18,7 +18,7 @@
         {{ end }}
         <div class="content">
             <a href="{{ .Site.BaseURL }}"><div class="name"><h1>{{ .Site.Title }}</h1></div></a>
-            <nav>
+            <nav class="topbar">
                 <ul>
                     {{ range $.Site.Home.Sections }}
                         <li><a href="{{ .Section | urlize | absURL }}">{{ .Section }}</a></li>
